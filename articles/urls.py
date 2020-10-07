@@ -1,7 +1,12 @@
+
+from django.conf.urls import url
 from django.urls import path
 
-from articles.views import articles_list
+from articles.views import ArticleList
 
 urlpatterns = [
-    path('', articles_list, name='articles'),
+    path('', ArticleList.as_view()),
 ]
+
+
+print('artcls/url triggered =================================')
